@@ -55,7 +55,7 @@
 
     // TODO: Hard
     // NOTES -> 
-    
+
     // style first image, below second player
     const firstImg = document.querySelector('.firstImg');
     firstImg.style.width = "50px";
@@ -68,6 +68,17 @@
         "width": "400",
         "height": "300",
     });
+
+    // jwplayer().on('time') = https://developer.jwplayer.com/jwplayer/docs/jw8-javascript-api-reference
+    // duration / position / viewable
+    secondInstance.on('time', (e)=> {
+        const videoTime = Math.round(e.position)
+        
+        if(videoTime === 5){
+            
+        }
+        console.log(videoTime)
+    })
 
 
 </script>
