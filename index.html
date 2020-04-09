@@ -13,6 +13,9 @@
     <a class="loadSecondVideo" href="javascript:playerInstance;"> Next Video </a>
 
     <div id="secondElement"></div>
+    <img class="firstImg"
+        src="https://vignette1.wikia.nocookie.net/nintendo/images/e/eb/Mario_Circle.svg/revision/latest/scale-to-width-down/2000?cb=20150526114419&path-prefix=en"
+        alt="">
 
     <!-- JS -->
     <script type="text/JavaScript">
@@ -20,7 +23,7 @@
     // TODO: Easy
     // NOTES -> helpful link from API demonstrating how to write calls
     // https://www.jwplayer.com/developers/web-player-demos/dynamic-ad-playback/
-    var playerInstance = jwplayer("myElement");
+    let playerInstance = jwplayer("myElement");
 
     playerInstance.setup({
         "file": "http://brianw.success.jwplayer.com/files/EasyVideo.mp4",
@@ -52,9 +55,14 @@
 
     // TODO: Hard
     // NOTES -> 
-    var playerInstance = jwplayer("secondElement");
+    
+    // style first image, below second player
+    const firstImg = document.querySelector('.firstImg');
+    firstImg.style.width = "50px";
 
-    playerInstance.setup({
+    // create a second JWPlayer instance
+    var secondInstance = jwplayer("secondElement");
+    secondInstance.setup({
         "file": "http://brianw.success.jwplayer.com/files/HardVideo.mp4",
         "image": "http://brianw.success.jwplayer.com/files/HardImage.jpg",
         "width": "400",
