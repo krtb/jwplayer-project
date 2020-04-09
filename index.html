@@ -10,9 +10,15 @@
 
 <body>
     <div id="myElement"></div>
+    <!-- <div class="loadSecondVideo" id="mySecondElement"></div> -->
+    <a class="loadSecondVideo" href="javascript:playerInstance;"> Next Video </a>
 
+    <!-- JS -->
     <script type="text/JavaScript">
 
+    // TODO: Easy
+    // NOTES -> helpful link from API demonstrating how to write calls
+    // https://www.jwplayer.com/developers/web-player-demos/dynamic-ad-playback/
     var playerInstance = jwplayer("myElement");
 
     playerInstance.setup({
@@ -22,9 +28,26 @@
         "height": "300",
     });
 
-    // TODO: helpful link from API demonstrating how to write calls
-    // https://www.jwplayer.com/developers/web-player-demos/dynamic-ad-playback/
     playerInstance.on('complete', () => alert("thanks for watching!"));
+
+    // TODO: Medium
+    // NOTES -> https://developer.jwplayer.com/jwplayer/docs/jw8-reference
+    //  - Example: "Using the JW Player API" && "Targeting multiple players"
+
+    let secondVideoClick = document.querySelector('.loadSecondVideo')
+
+    secondVideoClick.addEventListener('click', (e)=> {
+        // https://developer.jwplayer.com/jwplayer/docs/jw8-player-errors-reference#202621
+        // needed to be a JSON object, overwriting properties that need changing. Like video(file) & image
+        e.preventDefault()
+        // load second video
+        playerInstance.load({
+            "file": "http://brianw.success.jwplayer.com/files/MediumVideo.mp4",
+            "image": "http://brianw.success.jwplayer.com/files/MediumImage.jpg"
+        });
+        // play second video immediately after loading
+        playerInstance.play();
+    })
 
 </script>
 
