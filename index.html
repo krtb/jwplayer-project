@@ -12,6 +12,8 @@
     <div id="myElement"></div>
     <a class="loadSecondVideo" href="javascript:playerInstance;"> Next Video </a>
 
+    <div id="secondElement"></div>
+
     <!-- JS -->
     <script type="text/JavaScript">
 
@@ -50,7 +52,14 @@
 
     // TODO: Hard
     // NOTES -> 
+    var playerInstance = jwplayer("secondElement");
 
+    playerInstance.setup({
+        "file": "http://brianw.success.jwplayer.com/files/HardVideo.mp4",
+        "image": "http://brianw.success.jwplayer.com/files/HardImage.jpg",
+        "width": "400",
+        "height": "300",
+    });
 
 
 </script>
