@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jwplayer.com/libraries/1p5nI6ZC.js"></script>
+</head>
+
+<body>
+    <div id="myElement"></div>
+
+    <script type="text/JavaScript">
+
+    var playerInstance = jwplayer("myElement");
+
+    playerInstance.setup({
+        "file": "http://brianw.success.jwplayer.com/files/EasyVideo.mp4",
+        "image": "http://brianw.success.jwplayer.com/files/EasyImage.jpg",
+        "width": "400",
+        "height": "300",
+    });
+
+    // TODO: helpful link from API demonstrating how to write calls
+    // https://www.jwplayer.com/developers/web-player-demos/dynamic-ad-playback/
+    playerInstance.on('complete', () => alert("thanks for watching!"));
+
+</script>
+
+</body>
+
+</html>
