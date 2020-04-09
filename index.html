@@ -72,12 +72,15 @@
     // jwplayer().on('time') = https://developer.jwplayer.com/jwplayer/docs/jw8-javascript-api-reference
     // duration / position / viewable
     secondInstance.on('time', (e)=> {
+        // capture video time in seconds, transform to whole number
         const videoTime = Math.round(e.position)
         
+        // when video hits 5 seconds, pause, change Mario img to Wario img dynamically
         if(videoTime === 5){
-            
+            secondInstance.pause();
+            firstImg.src = "https://www.mariowiki.com/images/thumb/2/2a/Wario_Basic_Line_Artwork.svg/200px-Wario_Basic_Line_Artwork.svg.png"
+            firstImg.style.width = "50px";
         }
-        console.log(videoTime)
     })
 
 
