@@ -73,7 +73,8 @@
     // duration / position / viewable
     secondInstance.on('time', (e)=> {
         // capture video time in seconds, transform to whole number
-        const videoTime = Math.round(e.position)
+        const videoTime = Math.round(e.position) - 1
+        console.log(videoTime);
         
         // when video hits 5 seconds, pause, change Mario img to Wario img dynamically
         if(videoTime === 5){
