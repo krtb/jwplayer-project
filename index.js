@@ -17,7 +17,7 @@
     });
 
     // on video completion, alert user with message
-    playerInstance.on('complete', () => alert("thanks for watching!"));
+    playerInstance.on('complete', () => alert("Thanks for watching!"));
 
     // TODO: Medium
 
