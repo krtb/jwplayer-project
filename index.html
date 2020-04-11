@@ -22,77 +22,7 @@
             alt="">
 
         <div>
-
-            <!-- JS -->
-            <script type="text/JavaScript">
-
-    // TODO: Easy
-    // NOTES -> helpful link from API demonstrating how to write calls
-    // https://www.jwplayer.com/developers/web-player-demos/dynamic-ad-playback/
-    let playerInstance = jwplayer("myElement");
-
-    playerInstance.setup({
-        "file": "http://brianw.success.jwplayer.com/files/EasyVideo.mp4",
-        "image": "http://brianw.success.jwplayer.com/files/EasyImage.jpg",
-        "width": "400",
-        "height": "300",
-    });
-
-    playerInstance.on('complete', () => alert("thanks for watching!"));
-
-    // TODO: Medium
-    // NOTES -> https://developer.jwplayer.com/jwplayer/docs/jw8-reference
-    //  - Example: "Using the JW Player API" && "Targeting multiple players"
-
-    let secondVideoClick = document.querySelector('.loadSecondVideo');
-
-    secondVideoClick.addEventListener('click', (e)=> {
-        // https://developer.jwplayer.com/jwplayer/docs/jw8-player-errors-reference#202621
-        // needed to be a JSON object, overwriting properties that need changing. Like video(file) & image
-        e.preventDefault();
-        // load second video
-        playerInstance.load({
-            "file": "http://brianw.success.jwplayer.com/files/MediumVideo.mp4",
-            "image": "http://brianw.success.jwplayer.com/files/MediumImage.jpg"
-        });
-        // play second video immediately after loading
-        playerInstance.play();
-    });
-
-    // TODO: Hard
-    // NOTES -> 
-
-    // style first image, below second player
-    const firstImg = document.querySelector('.firstImg');
-    firstImg.style.width = "50px";
-
-    // create a second JWPlayer instance
-    var secondInstance = jwplayer("secondElement");
-    secondInstance.setup({
-        "file": "http://brianw.success.jwplayer.com/files/HardVideo.mp4",
-        "image": "http://brianw.success.jwplayer.com/files/HardImage.jpg",
-        "width": "400",
-        "height": "300",
-    });
-
-    // jwplayer().on('time') = https://developer.jwplayer.com/jwplayer/docs/jw8-javascript-api-reference
-    // duration / position / viewable
-    secondInstance.on('time', (e)=> {
-        // capture video time in seconds, transform to whole number
-        const videoTime = Math.round(e.position) - 1;
-        console.log(videoTime);
-        
-        // when video hits 5 seconds, pause, change Mario img to Wario img dynamically
-        if(videoTime === 5){
-            secondInstance.pause();
-            firstImg.src = "https://www.mariowiki.com/images/thumb/2/2a/Wario_Basic_Line_Artwork.svg/200px-Wario_Basic_Line_Artwork.svg.png";
-            firstImg.style.width = "50px";
-        };
-    });
-
-
-</script>
-
+            <script src="./index.js"></script>
 </body>
 
 </html>
