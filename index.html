@@ -6,23 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jwplayer.com/libraries/1p5nI6ZC.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma+2|Limelight&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c1e4f62e15.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
 <body>
 
     <div class="flexBoxContainer">
-        <!-- first video -->
-        <div id="myElement"></div>
-        <a class="loadSecondVideo" href="javascript:playerInstance;"> Next Video </a>
+        <div class="row">
+            
+            <h1 class="title">Movie Viewer</h1>
 
-        <!-- second video & image below -->
-        <div id="secondElement"></div>
-        <img class="firstImg"
-            src="https://vignette1.wikia.nocookie.net/nintendo/images/e/eb/Mario_Circle.svg/revision/latest/scale-to-width-down/2000?cb=20150526114419&path-prefix=en"
-            alt="">
+            <!-- first video -->
+            <div class="firstElementContainer" >
+            <div id="myElement"></div>
 
-        <div>
-            <script src="./index.js"></script>
+            <div class="button-flex-container">
+
+            <div class="addSpacing" >
+            <a id="button" class="loadSecondVideo blau" href="javascript:playerInstance;"> Next Video </a>
+            </div>
+
+            <div class="addSpacing">
+            <a id="button" class="loadPreviousVideo blau" > Previous Video </a>
+            </div>
+
+            </div>
+
+            <!-- second video & image below -->
+            <div class="secondElementContainer">
+            <div id="secondElement"></div>
+            <div class="addSpacing">
+            <img class="firstImg"
+                src="https://vignette1.wikia.nocookie.net/nintendo/images/e/eb/Mario_Circle.svg/revision/latest/scale-to-width-down/2000?cb=20150526114419&path-prefix=en"
+                alt="">
+            </div>
+            </div>
+        </div>
+
+
+        <!-- social -->
+
+
+    <div>
+
+    <script src="./index.js"></script>
 </body>
 
 </html>

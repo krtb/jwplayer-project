@@ -1,0 +1,111 @@
+/* General rules that affect multiple elements */
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+
+a {
+    font-family: 'Baloo Tamma 2', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    color:#fdfffc;
+}
+
+/* JWPlayer Styles from API */
+.jw-wrapper {
+    background-color: #577590;
+}
+
+.jwplayer {
+    border-radius: 30px;
+}
+
+/* FLEXBOX AND DIV STYLING */
+.flexBoxContainer {
+    /* height: 100%; */
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4564;
+}
+
+.firstElementContainer, .secondElementContainer {
+    /* background-color: tomato; */
+    padding-top: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.title {
+/* background-color: tomato; */
+margin: 10px;
+line-height: 45px;
+color: #fdfffc;
+font-weight: bold;
+font-size: 3em;
+text-align: center;
+font-family: 'Limelight', cursive;
+}
+
+.row {
+    width: auto;
+    /* border: 1px solid blue; */
+}
+
+
+#myElement {
+
+}
+
+#secondElement {
+
+}
+
+/* button */
+.addSpacing {
+    padding: 10px 10px ;
+    justify-content: center safe;
+}
+
+.button-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.loadSecondVideo, .loadPreviousVideo{
+  color: white;
+  position: relative;
+  
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  
+  box-shadow: 0 8px 0 0 #3d9ec4;
+  border: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.loadSecondVideo:active, .loadPreviousVideo:active{
+  box-shadow: none;
+  top: 10px;
+  margin-bottom: o;
+}
+.blau:hover{
+  background-color:#4bc7e8;
+}
+.blau {
+  background-color:#4bbce8;
+}
+/* social buttons */
