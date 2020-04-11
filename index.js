@@ -71,3 +71,19 @@
             firstImg.style.width = "50px";
         }
     });
+
+// --------------- EXTRA -------------------- //
+
+const previousVideoClick = document.querySelector('.loadPreviousVideo')
+
+// attach an event listener function to div
+previousVideoClick.addEventListener('click', (e) => {
+    // https://developer.jwplayer.com/jwplayer/docs/jw8-player-errors-reference#202621
+    // needed to be a JSON object, overwriting properties that need changing. Like video file & image
+    e.preventDefault()
+    // load first video, will not play 
+    playerInstance.load({
+        "file": "http://brianw.success.jwplayer.com/files/EasyVideo.mp4",
+        "image": "http://brianw.success.jwplayer.com/files/EasyImage.jpg"
+    });
+})
